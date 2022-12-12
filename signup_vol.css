@@ -1,0 +1,109 @@
+body{
+	background-image:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ),  url("./volunteers-2d-isolated-illustration-contributing-to-humanitarian-aid-smiling-man-and-woman-social-service-worker-flat-characters-on-cartoon-background-charity-work-colourful-scene-vector.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%,50%;
+	color: white;
+	margin-top: 50px;
+	background-attachment: fixed;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    height: 1000px;
+
+}
+.form-section{
+	height: 1030px;
+	width: 730px;
+	background-color: rgba(27, 27, 50, 0.7);
+	border-radius: 5px;
+	margin-left: 380px;	
+}
+.form-content{
+	margin-left: 45px;
+}	
+.title{
+	font-family: 'Poppins', sans-serif;
+	font-size: 35px;
+    font-weight: 150;
+    line-height: 1;
+}
+.sub-quote{
+	font-family: 'Poppins', sans-serif;
+	font-size: 20;
+    font-weight: 20;
+    margin-top: -25px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    font-style: italic;
+
+}
+
+.textbx-name{
+	height: 40px;
+	width: 645px;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border-width: 0px;
+
+}
+.textbx-email{
+	height: 40px;
+	width: 645px;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border-width: 0px;
+}
+.textbx-number{
+	height: 40px;
+	width: 645px;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border-width: 0px;
+}
+.textbx-role{
+	height: 40px;
+	width: 645px;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border-width: 0px;
+}
+.textbx-fav{
+	height: 40px;
+	width: 645px;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border-width: 0px;
+}
+.buttonbx{
+	height: 45px;
+	width: 645px;
+	border-radius: 4px;
+	background-color: seagreen;
+	color: white;
+	font-size: 20px;
+	border-width: 0px;
+}
+input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: 1.5em;
+}
+input[type=checkbox] {
+    border: 0px;
+    width: 5%;
+    height: 1.5em;
+}
+::placeholder { 
+  color: grey;
+  font-size: 18px;
+}
+.text-area{
+	margin-top: 5px;
+}

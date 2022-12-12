@@ -1,0 +1,118 @@
+<html>
+<head>
+	<title>SIGNUP VOLUNTEER</title>
+	<link rel="stylesheet" href="./signup_vol.css" type="text/css">
+	<script src=
+	"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+		</script>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			//akpugal2001-->freecodesur database in firebase
+			const firebaseConfig = {
+  			apiKey: "AIzaSyABBF1pYywMtDWjvBQC9TsTg2eYJX8ThQc",
+  			authDomain: "freecodesur.firebaseapp.com",
+  			databaseURL: "https://freecodesur-default-rtdb.firebaseio.com",
+  			projectId: "freecodesur",
+  			storageBucket: "freecodesur.appspot.com",
+  			messagingSenderId: "463886425037",
+  			appId: "1:463886425037:web:3e08e95b88344794280284"
+		};
+		firebase.initializeApp(firebaseConfig);
+		var messagesRef = firebase.database()
+			.ref('Collected Data');
+		document.getElementById('contactform').addEventListener('submit',submitForm);
+		function submitForm(e){
+			e.preventDefault();
+			var name=document.getElementById('name').value;
+			var email=document.getElementById('email').value;
+			var pword=document.getElementById('pword').value;
+			var age=document.getElementById('age').value;
+            var phone=document.getElementById('phone').value;
+            var role=document.getElementById('role').value;
+			var moh=document.getElementById('moh').value;
+            var address=document.getElementById('address').value;
+			
+			saveMessage(name,email,pword,age,phone,role,moh,address);
+			document.getElementById('contactform').reset();
+		}
+		function saveMessage(name,email,pword,age,phone,role,moh,address){
+			var newMessageRef=messagesRef.push();
+			newMessageRef.set({
+				name:name,
+				email:email,
+				pword:pword,
+				age:age,
+				phone:phone,
+                role:role,
+                moh:moh,
+                address:address
+			});
+		}
+
+		});
+		
+	</script>
+</head>
+<body>
+	<form id="contactform">
+	<div class="title">
+		<center>
+			<p>Volunteer Signup</p>
+			<p class="sub-quote">Its not how much we give,but how much love we put into giving</p>
+		</center>
+	</div>
+	<div class="form-section">
+		<div class="form-content">
+			<br><br>
+			<label>Name</label>
+			<br>
+			<input type="text" id="name" name="name" placeholder="  Enter your name" class="textbx-name" >
+			<br>
+			<label>Email</label>
+			<br>
+			<input type="text"  id="email" name="email" placeholder="  Enter your Email" class="textbx-email">
+			<br>
+			<label>Password</label>
+			<br>
+			<input type="password" name="pword" id="pword" class="textbx-name" placeholder="Enter your password">
+			<br>
+			<label>Age</label>
+			<br>
+			<input type="number" id="age" name="age" placeholder="  Age" min="10" step="1" class="textbx-number">
+			<br>
+            <br>
+			<label>Phone Number</label>
+			<br>
+			<input type="number" id="phone" name="age" placeholder="Phone number" min="10" step="1" class="textbx-number">
+			<br>
+			<label>Which option best describes your current role?</label>
+			<br>
+			
+			<select name="role" id="role" class="textbx-role">
+    			<option value="current role" disabled selected class="role-placeholder">  Select your current role</option>
+    			<option value="student">Student</option>
+    			<option value="ftjob">Full Time Job</option>
+    			<option value="ptj">Part Time Job</option>
+    			<option value="pns">Prefer not to say</option>
+    		</select>
+  			<br>
+  			<label>Mode of help</label><br>
+  			<select name="feature" id="moh" class="textbx-fav">
+  				<option value="none" disabled selected>  Select an option</option>
+  				<option value="All">All</option>
+  				<option value="cash">Cash</option>
+  				<option value="Transport">Transport</option>
+  				<option value="food">Food</option>
+                <option value="mp">Man Power</option>
+  			</select>
+  			<br>
+  			<label>Address</label><br>
+  			<textarea id="address" name="cmnts" rows="8" cols="86" placeholder="  Enter your address here..." class="text-area"></textarea><br>
+  			<br>
+  			<button class="buttonbx" id="submit">Submit</button>
+		</div>
+	</div>
+	</form>
+
+</body>
+</html>
